@@ -26,17 +26,17 @@ const Todo = () => {
         if (!inputData) {
             alert('Please fill data!')
             return;
-        }else if(inputData && toggleButton){
+        } else if (inputData && toggleButton) {
 
-            const abc =  items.map( (ele) => {
-                if(ele.date === isEditItem){
-                    return {...ele, value: inputData}
-                }else{
-                    return  ele;
+            const abc = items.map((ele) => {
+                if (ele.date === isEditItem) {
+                    return { ...ele, value: inputData }
+                } else {
+                    return ele;
                 }
             });
 
-            setItems( abc )
+            setItems(abc)
 
             setInputData("");
             setIsEditItem(null);
@@ -83,8 +83,8 @@ const Todo = () => {
     }
 
     //update that current item edit
-    const updateItem = () =>{
-         
+    const updateItem = () => {
+
     }
 
     //delete all items
@@ -129,7 +129,7 @@ const Todo = () => {
                         {toggleButton ?
                             (
 
-                                <i className="far fa-solid fa-edit" onClick={() => {addItem()}}></i>
+                                <i className="far fa-solid fa-edit" onClick={() => { addItem() }}></i>
 
                             )
 
@@ -154,11 +154,20 @@ const Todo = () => {
                             return (
                                 <div className="eachItem" key={index}>
 
-                                    <h3>{currItem.value}</h3>
+                                    <div className="itemTitle">
+                                    <h3 align="left">{currItem.value}</h3>
 
-                                    <div className="todo-btn"></div>
+                                    </div>
+
+                                    <div className="itemActions">
+
                                     <i className="far fa-solid fa-edit" onClick={() => { editItem(currItem.date) }}></i>
                                     <i className="far fa-solid fa-trash-alt" onClick={() => deleteItem(currItem.date)}></i>
+
+                                    </div>
+
+
+
 
                                 </div>
 
