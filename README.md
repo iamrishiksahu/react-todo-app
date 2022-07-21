@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+![Alt Text]https://github.com/iamrishiksahu/react-todo-app/blob/main/image_2022-07-22_010441847.png
 
 In the project directory, you can run:
 
